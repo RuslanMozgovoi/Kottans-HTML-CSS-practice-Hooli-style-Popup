@@ -1,0 +1,44 @@
+body {
+  background-color: #f0eee8;
+  width: 100%;
+  font-family: sans-serif;
+}
+
+nav {
+  background-color: white;
+  width: 550px;
+  height: 35px;
+  margin: auto;
+}
+
+.container {
+  float: right;
+  width: 300px;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  /* border: 1px solid blue; */
+}
+
+.container img {
+  height: 24px;
+}
+
+.profile-photo {
+  border-radius: 50%;
+}
+
+.container div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80%;
+  border-radius: 10%;
+  border: 2px solid white;
+}
+
+.container div:hover {
+  border: 2px solid rgb(119, 173, 223);
+  cursor: pointer;
+}
