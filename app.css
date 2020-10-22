@@ -94,6 +94,7 @@ input:focus + .nav-el {
   border: 1px solid rgb(200, 218, 235);
   background-color: white;
   font-size: 14px;
+  line-height: 0px;
   padding: 0px;
   box-shadow: 0px 0px 5px 5px rgba(214, 214, 214, 0.5);
   display: none;
@@ -155,8 +156,8 @@ input:focus + .nav-el {
 }
 
 .img-cont img {
-  max-width: 62px;
-  max-height: 62px;
+  max-width: 58px;
+  max-height: 58px;
 }
 
 .app-cont:hover {
