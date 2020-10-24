@@ -1,6 +1,7 @@
 body {
   background-color: #f0eee8;
   font-family: sans-serif;
+  color: black;
   margin: 0;
 }
 
@@ -8,7 +9,7 @@ nav {
   width: 550px;
   float: right;
   background-color: white;
-  height: 35px;
+  height: 37px;
   margin: 20px;
   border-radius: 5px;
 }
@@ -22,24 +23,33 @@ nav {
   align-items: center;
 }
 
-.nav-el {
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-el a {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 31px;
+  text-decoration: none;
+  color: black;
+  height: 33px;
   box-sizing: border-box;
   border-radius: 5px;
   border: 2px solid white;
-  padding: 0px 2px;
+  padding: 1px;
 }
 
-.nav-el:hover {
+.nav-el a:hover {
   border: 2px solid rgb(119, 173, 223);
   cursor: pointer;
 }
-
-#nal-el-menu {
-  padding: 0px;
+.nav-el a:focus {
+  background-color: rgb(150, 229, 243);
+  border: 2px solid rgb(150, 229, 243);
+  outline: 0px;
 }
 
 #menu-label {
@@ -64,13 +74,10 @@ label:hover {
   cursor: pointer;
 }
 
-.nav-el:focus {
+#button-1:focus ~ #menu-anchor {
   background-color: rgb(150, 229, 243);
-}
-
-input:focus + .nav-el {
-  border: 2px solid black;
-  background-color: rgb(150, 229, 243);
+  border: 2px solid rgb(150, 229, 243);
+  outline: 0px;
 }
 
 #button-1:checked ~ #apps-window {
@@ -104,13 +111,15 @@ input:focus + .nav-el {
   top: -10px;
   left: 250px;
   border-style: solid;
-  border-width: 0 10px 15px 10px;
-  border-color: transparent transparent #ffffff transparent;
+  border-width: 0 10px 10px 10px;
+  border-color: transparent transparent white transparent;
 }
 
 #top-triangle-border {
   z-index: -2;
-  top: -12px;
+  border-width: 0 12px 12px 12px;
+  top: -11.5px;
+  left: 248px;
   border-color: transparent transparent rgb(200, 218, 235) transparent;
 }
 
@@ -185,6 +194,7 @@ input:focus + #more {
 
 #button-2:checked ~ #apps-cont {
   overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 #apps-window2 {
@@ -193,10 +203,7 @@ input:focus + #more {
   width: 100%;
   border-top: 1px solid rgb(200, 218, 235);
   background-color: white;
-  font-size: 12px;
-  line-height: 0px;
   padding: 0px;
-  right: 1px;
 }
 
 #more {
@@ -216,7 +223,6 @@ input:focus + #more {
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  color: black;
 }
 
 #more-label-div:hover {
@@ -236,9 +242,9 @@ input:focus + #more {
 
 #profile-photo {
   border-radius: 50%;
-  height: 27px;
+  width: 27px;
 }
 
 #bell-icon {
-  height: 24px;
+  width: 24px;
 }

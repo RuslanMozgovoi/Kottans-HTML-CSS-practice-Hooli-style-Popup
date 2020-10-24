@@ -9,24 +9,22 @@
   </head>
   <body>
     <nav>
-      <div class="nav-container">
-        <div class="nav-el nav-el-text" tabindex="0">
-          <p>Mail</p>
-        </div>
-        <div class="nav-el nav-el-text" tabindex="0">
-          <p>Images</p>
-        </div>
+      <ul class="nav-container">
+        <li class="nav-el">
+          <a href="#" tabindex="0">Mail</a>
+        </li>
+        <li class="nav-el">
+          <a href="#" tabindex="0">Images</a>
+        </li>
 
-        <!-- #wrap-el - обертка для input + label + popup.
-              CSS к #wrap-el не применял -->
-        <div id="wrap-el">
-
-          <input type="checkbox" id="button-1" tabindex="0">
-          <div class="nav-el" id="nal-el-menu">
+        <li class="nav-el">
+          
+          <input type="checkbox" id="button-1"  tabindex="0">
+          <a href="#" tabindex="-1" id="menu-anchor">
             <label for="button-1" id="menu-label">
-                <img src="img/apps.jpg" alt="Menu icon">
+              <img src="img/apps.jpg" alt="Menu icon">
             </label>
-          </div>
+          </a>
 
           <section id="apps-window">
             <div id="top-triangle"></div>
@@ -179,14 +177,14 @@
               </div>
             </div>
           </section>
-        </div>
+        </li>
 
-        <div class="nav-el" tabindex="0">
-          <img id="bell-icon" src="img/bell.png" alt="Notifications icon">
-        </div>
-        <div class="nav-el" tabindex="0">
-          <img id="profile-photo" src="img/bilbo.jpeg" alt="profile-photo">
-        </div>
+        <li class="nav-el">
+          <a href="#" tabindex="0"><img id="bell-icon" src="img/bell.png" alt="Notifications icon"></a>
+        </li>
+        <li class="nav-el">
+          <a href="#" tabindex="0"><img id="profile-photo" src="img/bilbo.jpeg" alt="profile-photo"></a>
+        </li>
       </div>
     </nav>
 
