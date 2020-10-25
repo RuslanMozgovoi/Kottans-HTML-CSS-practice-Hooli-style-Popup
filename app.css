@@ -51,7 +51,7 @@ a {
   cursor: pointer;
 }
 .nav-el > a:focus {
-  background-color: rgb(160, 215, 224);
+  background-color: rgb(173, 243, 255);
   /* border: 2px solid rgb(150, 229, 243); */
   outline: 0px;
 }
@@ -78,9 +78,8 @@ label:hover {
   cursor: pointer;
 }
 
-#button-1:focus ~ #menu-label {
-  background-color: rgb(150, 229, 243);
-  border: 2px solid rgb(150, 229, 243);
+#button-1:focus + a {
+  background-color: rgb(173, 243, 255);
   outline: 0px;
 }
 
