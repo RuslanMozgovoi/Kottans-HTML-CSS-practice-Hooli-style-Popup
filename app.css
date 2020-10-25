@@ -1,7 +1,8 @@
+/* main styles */
+
 body {
   background-color: #f0eee8;
   font-family: sans-serif;
-
   margin: 0;
 }
 
@@ -34,6 +35,12 @@ a {
   color: black;
 }
 
+input[type="checkbox"] {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+
 .nav-el > a {
   display: flex;
   align-items: center;
@@ -41,19 +48,7 @@ a {
   height: 33px;
   box-sizing: border-box;
   border-radius: 5px;
-  /* border: 2px solid white; */
   padding: 3px;
-}
-
-.nav-el > a:hover {
-  background-color: rgb(231, 231, 231);
-  /* border: 2px solid rgb(119, 173, 223); */
-  cursor: pointer;
-}
-.nav-el > a:focus {
-  background-color: rgb(173, 243, 255);
-  /* border: 2px solid rgb(150, 229, 243); */
-  outline: 0px;
 }
 
 #menu-label {
@@ -68,28 +63,16 @@ a {
   border-radius: 3px;
 }
 
-input[type="checkbox"] {
-  position: absolute;
-  top: -9999px;
-  left: -9999px;
+#profile-photo {
+  border-radius: 50%;
+  width: 27px;
 }
 
-label:hover {
-  cursor: pointer;
+#bell-icon {
+  width: 24px;
 }
 
-#button-1:focus + a {
-  background-color: rgb(173, 243, 255);
-  outline: 0px;
-}
-
-#button-1:checked ~ #apps-window {
-  display: block;
-}
-
-#button-1:checked ~ #more {
-  display: block;
-}
+/* apps-window elements styles */
 
 #apps-window {
   width: 330px;
@@ -159,55 +142,10 @@ label:hover {
   padding-bottom: 10px;
 }
 
-.img-cont {
-  height: 66px;
-  width: 66px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .app-cont img {
   max-width: 58px;
   max-height: 58px;
   align-self: center;
-}
-
-.app-cont:hover {
-  background-color: rgb(231, 231, 231);
-  cursor: pointer;
-}
-
-.app-cont:focus {
-  background-color: rgb(173, 243, 255);
-  outline: 0px;
-}
-
-input:focus + #more {
-  background-color: rgb(173, 243, 255);
-  outline: 0px;
-}
-
-#more:focus {
-  background-color: rgb(173, 243, 255);
-  outline: 0px;
-}
-
-#button-2:checked ~ #apps-cont > #apps-window2 {
-  display: block;
-}
-
-#button-2:checked ~ #more {
-  display: none;
-}
-
-#button-2:checked {
-  display: none;
-}
-
-#button-2:checked ~ #apps-cont {
-  overflow-y: scroll;
-  overflow-x: hidden;
 }
 
 #apps-window2 {
@@ -240,11 +178,6 @@ input:focus + #more {
   padding: 0px;
 }
 
-#more:hover {
-  background-color: rgb(231, 231, 231);
-  cursor: pointer;
-}
-
 #even-more {
   width: 100%;
   display: flex;
@@ -255,11 +188,61 @@ input:focus + #more {
   padding-bottom: 10px;
 }
 
-#profile-photo {
-  border-radius: 50%;
-  width: 27px;
+/* styles changes depends on user's actions */
+
+.nav-el > a:hover {
+  background-color: rgb(231, 231, 231);
+  cursor: pointer;
+}
+.nav-el > a:focus {
+  background-color: rgb(173, 243, 255);
+  outline: 0px;
 }
 
-#bell-icon {
-  width: 24px;
+label:hover {
+  cursor: pointer;
+}
+
+#button-1:focus + a {
+  background-color: rgb(173, 243, 255);
+  outline: 0px;
+}
+
+#button-1:checked ~ #apps-window,
+#button-1:checked ~ #more {
+  display: block;
+}
+
+.app-cont:hover {
+  background-color: rgb(231, 231, 231);
+  cursor: pointer;
+}
+
+.app-cont:focus {
+  background-color: rgb(173, 243, 255);
+  outline: 0px;
+}
+
+#more:hover {
+  background-color: rgb(231, 231, 231);
+}
+
+#button-2:focus + #more,
+#more:focus {
+  background-color: rgb(173, 243, 255);
+  outline: 0px;
+}
+
+#button-2:checked ~ #apps-cont > #apps-window2 {
+  display: block;
+}
+
+#button-2:checked,
+#button-2:checked ~ #more {
+  display: none;
+}
+
+#button-2:checked ~ #apps-cont {
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
