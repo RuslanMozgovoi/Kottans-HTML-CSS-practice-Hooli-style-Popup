@@ -1,7 +1,7 @@
 body {
   background-color: #f0eee8;
   font-family: sans-serif;
-  color: black;
+
   margin: 0;
 }
 
@@ -29,26 +29,30 @@ ul {
   padding: 0;
 }
 
-.nav-el a {
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.nav-el > a {
   display: flex;
   align-items: center;
   justify-content: center;
-  text-decoration: none;
-  color: black;
   height: 33px;
   box-sizing: border-box;
   border-radius: 5px;
-  border: 2px solid white;
-  padding: 1px;
+  /* border: 2px solid white; */
+  padding: 3px;
 }
 
-.nav-el a:hover {
-  border: 2px solid rgb(119, 173, 223);
+.nav-el > a:hover {
+  background-color: rgb(231, 231, 231);
+  /* border: 2px solid rgb(119, 173, 223); */
   cursor: pointer;
 }
-.nav-el a:focus {
-  background-color: rgb(150, 229, 243);
-  border: 2px solid rgb(150, 229, 243);
+.nav-el > a:focus {
+  background-color: rgb(160, 215, 224);
+  /* border: 2px solid rgb(150, 229, 243); */
   outline: 0px;
 }
 
@@ -74,7 +78,7 @@ label:hover {
   cursor: pointer;
 }
 
-#button-1:focus ~ #menu-anchor {
+#button-1:focus ~ #menu-label {
   background-color: rgb(150, 229, 243);
   border: 2px solid rgb(150, 229, 243);
   outline: 0px;
@@ -103,8 +107,10 @@ label:hover {
   display: none;
 }
 
-#top-triangle,
-#top-triangle-border {
+#apps-window:before,
+#apps-window:after {
+  content: "";
+  position: absolute;
   width: 0;
   height: 0;
   position: absolute;
@@ -115,7 +121,7 @@ label:hover {
   border-color: transparent transparent white transparent;
 }
 
-#top-triangle-border {
+#apps-window:after {
   z-index: -2;
   border-width: 0 12px 12px 12px;
   top: -11.5px;
@@ -143,13 +149,15 @@ label:hover {
   height: 90px;
   width: 70px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-end;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: center;
+  box-sizing: border-box;
   margin: 10px;
   padding: 0px;
   border-radius: 5%;
   border: 2px solid white;
+  padding-bottom: 10px;
 }
 
 .img-cont {
@@ -160,9 +168,10 @@ label:hover {
   justify-content: center;
 }
 
-.img-cont img {
+.app-cont img {
   max-width: 58px;
   max-height: 58px;
+  align-self: center;
 }
 
 .app-cont:hover {
@@ -171,13 +180,18 @@ label:hover {
 }
 
 .app-cont:focus {
-  background-color: rgb(150, 229, 243);
+  background-color: rgb(173, 243, 255);
+  outline: 0px;
 }
 
 input:focus + #more {
-  border: 2px solid black;
-  border-radius: 5%;
-  background-color: rgb(150, 229, 243);
+  background-color: rgb(173, 243, 255);
+  outline: 0px;
+}
+
+#more:focus {
+  background-color: rgb(173, 243, 255);
+  outline: 0px;
 }
 
 #button-2:checked ~ #apps-cont > #apps-window2 {
@@ -211,22 +225,24 @@ input:focus + #more {
   height: 30px;
   position: absolute;
   top: 486px;
-  box-sizing: border-box;
-  background-color: rgb(245, 238, 238);
-  border: 2px solid rgb(245, 238, 238);
+  background-color: rgb(245, 245, 245);
+  border: 0px;
+  padding: 0px;
 }
 
 #more-label-div {
   width: 100%;
-  height: 26px;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   text-decoration: none;
+  border: 0px;
+  padding: 0px;
 }
 
-#more-label-div:hover {
-  background-color: rgb(221, 237, 240);
+#more:hover {
+  background-color: rgb(231, 231, 231);
   cursor: pointer;
 }
 
